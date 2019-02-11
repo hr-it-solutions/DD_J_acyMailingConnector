@@ -33,7 +33,7 @@ for($i=0; $i<count($myNotications); $i++) {
 
 	if(!$AcyMailingConnector->checkListSubscription([$i]['id'], 6)){
 
-		$this->setError($myNotications[$i]['email'] . ' Notification not active');
+		$this->setError($myNotications[$i]['email'] . ' Not to list subscribed');
 
 		continue;
 	}
