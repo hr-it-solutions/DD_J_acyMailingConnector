@@ -21,8 +21,9 @@ A class, build for Joomla to connect you extension to acyMailing. It allows to c
 - To run multiple subscribers within one mailid, it is necessary to make a change to the AcyMailing Queu table?
 ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` )
 
-### Get it into acyMailing Core
+### Get it into acyMailing Core - Information about further developement
 We did informed AcyMailing with very positive feedback about these solution to get it into acyMailing Core.
+And we will now wait and hope for acyMailing implementation till we spend more time on that Connector.
 
 ### Using example
 
