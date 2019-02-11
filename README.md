@@ -25,7 +25,7 @@ ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mai
 We did informed AcyMailing with very positive feedback about these solution to get it into acyMailing Core.
 
 > #### Information about further developement
-> We will now wait and hope for acyMailing implementation to see if more time is needed to spend on that connector.
+> We will now wait and hope for acyMailing implementation to see if more time is needed to spend on that.
 
 ### Using example
 
