@@ -1,8 +1,8 @@
 
 [![DDSTATE](https://img.shields.io/badge/status-ALPHA-red.svg?style=flat)](https://img.shields.io/badge/status-ALPHA-red.svg?style=flat)
 
-# DD_acyMailing_Connector
-A class to connect you extension to acyMailing. It allows to check subscriptions, let you push your notifications into acymailing and huge more..
+# DD_J_acyMailing_Connector
+A class, build for Joomla to connect you extension to acyMailing. It allows to check subscriptions, let you push your notifications into acymailing and huge more..
 
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.png?v=102)](https://opensource.org/licenses/GPL-2.0/)
 
