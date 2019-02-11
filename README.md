@@ -4,7 +4,7 @@
 # DD_J_acyMailing_Connector
 A class, build for Joomla to connect you extension to acyMailing. It allows to check subscriptions, let you push your notifications into acymailing and huge more..
 
-![alt text](https://raw.githubusercontent.com/hr-it-solutions/DD_J_acyMailingConnector/master/acyMailingNotifications.jpg)
+![alt text](https://raw.githubusercontent.com/hr-it-solutions/DD_J_acyMailingConnector/master/demo.jpg)
 
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.png?v=102)](https://opensource.org/licenses/GPL-2.0/)
 
