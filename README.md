@@ -27,7 +27,9 @@ We did also informed AcyMailing with very positive feedback about these solution
 ```php
 $AcyMailingConnector = new AcyMailingConnector();
 $AcyMailingConnector->ignoreSubscription = true;
-$AcyMailingConnector->setTemplate(20); // The E-Mail template you created in acyMailing, including placeholder like {title},{name}, etc. 
+// The E-Mail template you created in acyMailing, including placeholder like {title}, {name}, etc. 
+// which you want to dynamically replace with the notification in the addMail() methode (see below)
+$AcyMailingConnector->setTemplate(20);
 
 for($i=0; $i<count($myNotications); $i++) {
 
