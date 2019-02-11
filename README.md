@@ -20,6 +20,48 @@ ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mai
 ### Get it into acyMailing Core
 We did also informed AcyMailing with very positive feedback about these solution to get it into acyMailing Core.
 
+
+### Using example
+
+
+```php
+<?php
+
+$AcyMailingConnector = new AcyMailingConnector();
+$AcyMailingConnector->ignoreSubscription = true;
+$AcyMailingConnector->setTemplate(20);
+
+for($i=0; $i<count($myNotications); $i++) {
+
+	if(!$AcyMailingConnector->checkListSubscription([$i]['id'], 6)){
+
+		$this->setError($myNotications[$i]['email'] . ' Notification not active');
+
+		continue;
+	}
+
+	$search = array('{title}', '{name}', '{lastname}', '{messagebody}', '{senddate}');
+	$replace = array(
+		$myNotications[$i]['title'],
+		$myNotications[$i]['name'],
+		$myNotications[$i]['lastname'],
+		$myNotications[$i]['messagebody'],
+		date('d.m.Y', strtotime($myNotications[$i]['senddate'])),
+		$external_link
+	);
+	
+	if(!$PwgAdsAcyMailing->addMail($user_data[$i]['id'], 6, $search, $replace)){
+		$errors[] = $user_data[$i]['email'];
+	}
+
+}
+
+if (!empty($errors)) {
+	$this->setError('Email could not be sent to the following addresses: ' . implode(', ', $errors));
+	return false;
+}
+```
+
 # System requirements
 Joomla 3.8 +                                                                                <br>
 PHP 5.6.13 or newer is recommended.
