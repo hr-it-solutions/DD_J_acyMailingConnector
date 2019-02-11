@@ -68,7 +68,7 @@ if (!empty($errors)) {
 }
 ```
 
-br>
+<br>
 
 ### Hack for multiple subscribers within one mailid
 To run multiple subscribers within one mailid, it is necessary to make a change to the #__acymailing_queue table?
