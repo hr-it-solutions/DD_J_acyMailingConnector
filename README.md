@@ -43,14 +43,14 @@ for($i=0; $i<count($myNotications); $i++) {
 		continue;
 	}
 
-	$search = array('{title}', '{name}', '{lastname}', '{messagebody}', '{senddate}');
+	$search = array('{title}', '{name}', '{lastname}', '{messagebody}', '{senddate}', '{link}');
 	$replace = array(
 		$myNotications[$i]['title'],
 		$myNotications[$i]['name'],
 		$myNotications[$i]['lastname'],
 		$myNotications[$i]['messagebody'],
 		date('d.m.Y', strtotime($myNotications[$i]['senddate'])),
-		$external_link
+		$backlink
 	);
 	
 	if(!$AcyMailingConnector->addMail($user_data[$i]['id'], 6, $search, $replace)){
