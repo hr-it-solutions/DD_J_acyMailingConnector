@@ -66,8 +66,8 @@ if (!empty($errors)) {
 ```
 
 # System requirements
-Joomla 3.8 +                                                                                <br>
-PHP 5.6.13 or newer is recommended.
+AcyMailing 5.10.4 or newer                                                                  <br>
+PHP 5.6.13 or newer
 
 # DD_ Namespace
 DD_ stands for **D**idl**d**u a.k.a | HR-IT-Solutions GmbH (Brand recognition)              <br>
