@@ -17,10 +17,10 @@ A class, build for Joomla to connect you extension to acyMailing. It allows to c
 
 **Note:** It is even in ALPHA state
 
-> ### Hack for multiple subscribers within one mailid
-> To run multiple subscribers within one mailid, it is necessary to make a change to the AcyMailing Queu table?
->
-> ```sql ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` ) ```
+### Hack for multiple subscribers within one mailid
+To run multiple subscribers within one mailid, it is necessary to make a change to the #__acymailing_queue table?
+
+```sql ALTER TABLE  `#__acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` ) ```
 
 ### Get it into acyMailing Core
 We did informed AcyMailing with very positive feedback about these solution to get it into acyMailing Core.
