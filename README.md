@@ -13,6 +13,13 @@ A class to connect you extension to acyMailing. It allows to check subscriptions
 
 ...
 
+### Hacks
+- To run multiple subscribes within one mailid, it is necessary to make a change to the AcyMailing Queu table?
+ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` )
+
+### Informations
+We did also informed AcyMailing with very positive feedback about these solution to get it into acyMailing Core.
+
 # System requirements
 Joomla 3.8 +                                                                                <br>
 PHP 5.6.13 or newer is recommended.
