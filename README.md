@@ -25,11 +25,9 @@ We did also informed AcyMailing with very positive feedback about these solution
 
 
 ```php
-<?php
-
 $AcyMailingConnector = new AcyMailingConnector();
 $AcyMailingConnector->ignoreSubscription = true;
-$AcyMailingConnector->setTemplate(20);
+$AcyMailingConnector->setTemplate(20); // The E-Mail template you created in acyMailing, including placeholder like {title},{name}, etc. 
 
 for($i=0; $i<count($myNotications); $i++) {
 
