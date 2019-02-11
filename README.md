@@ -12,8 +12,7 @@ A class, build for Joomla to connect you extension to acyMailing. It allows to c
 - checkListSubscription()
 - setTemplate()
 - addMail()
-
-...
+- ...
 
 <br>
 
