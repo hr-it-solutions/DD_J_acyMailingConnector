@@ -13,7 +13,7 @@ A class to connect you extension to acyMailing. It allows to check subscriptions
 
 ...
 
-### Hack for multiple subscribes
+### Hack for multiple subscribers within one mailid
 - To run multiple subscribes within one mailid, it is necessary to make a change to the AcyMailing Queu table?
 ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` )
 
