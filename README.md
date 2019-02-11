@@ -50,7 +50,7 @@ for($i=0; $i<count($myNotications); $i++) {
 		$external_link
 	);
 	
-	if(!$PwgAdsAcyMailing->addMail($user_data[$i]['id'], 6, $search, $replace)){
+	if(!$AcyMailingConnector->addMail($user_data[$i]['id'], 6, $search, $replace)){
 		$errors[] = $user_data[$i]['email'];
 	}
 
