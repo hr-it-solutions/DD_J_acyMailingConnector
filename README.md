@@ -22,14 +22,15 @@ To run multiple subscribers within one mailid, it is necessary to make a change 
 
 ```sql ALTER TABLE  `#__acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` ) ```
 
+
 ### Get it into acyMailing Core
 We did informed AcyMailing with very positive feedback about these solution to get it into acyMailing Core.
 
 > #### Information about further developement
 > We will now wait and hope for acyMailing implementation to see if more time is needed to spend on that.
 
-### Using example
 
+### Using example
 
 ```php
 $AcyMailingConnector = new AcyMailingConnector();
