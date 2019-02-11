@@ -18,7 +18,7 @@ class AcyMailingConnector {
 
 	var $pkey = '';
 
-    private $subject;
+        private $subject;
 	private $body;
 	private $altbody;
 
