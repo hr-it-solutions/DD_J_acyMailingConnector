@@ -15,6 +15,8 @@ A class, build for Joomla to connect you extension to acyMailing. It allows to c
 
 ...
 
+**Note:** It is even in ALPHA state
+
 ### Hack for multiple subscribers within one mailid
 - To run multiple subscribes within one mailid, it is necessary to make a change to the AcyMailing Queu table?
 ALTER TABLE  `lszqy_acymailing_queue` DROP PRIMARY KEY , ADD PRIMARY KEY (  `mailid` )
