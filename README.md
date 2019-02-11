@@ -28,6 +28,7 @@ We did informed AcyMailing with very positive feedback about these solution to g
 
 > #### Information about further developement
 > We will now wait and hope for acyMailing implementation to see if more time is needed to spend on that.
+
 <br>
 
 ### Using example
