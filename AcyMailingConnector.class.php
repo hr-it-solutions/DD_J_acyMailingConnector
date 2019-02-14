@@ -89,9 +89,9 @@ class AcyMailingConnector {
 	 *
 	 * @since 3.9
 	 *
-	 * @return mixed a minimal User ObjectList of valid subscriptions included in this AcyMailing list
-	 *               the list includes #__user cols {id}, {name}, {username}, {email}
-	 *               the list insludes #__acymailing_subscriber cols {subid}
+	 * @return mixed a minimal User ObjectList of valid subscriptions included in this AcyMailing list <br>
+	 *               • the list includes #__user cols {id}, {name}, {username}, {email} <br>
+	 *               • the list insludes #__acymailing_subscriber cols {subid}
 	 *
 	 */
 	public function getJUserList_AcyListSub($listID){
