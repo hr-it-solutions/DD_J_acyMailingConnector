@@ -22,11 +22,11 @@ class AcyMailingConnector {
 	private $body;
 	private $altbody;
 
-	// check params
+	// Check params
 	private $checked_UserID;
 	private $checked_ListID;
 
-	// acy email params
+	// Acy email params
 	private $mailid;
 	private $type            = "notification";
 	private $email_language  = "";
@@ -34,7 +34,10 @@ class AcyMailingConnector {
 	private $email_alias     = "notification";
 	private $email_summary   = "";
 
-	// ignore valide subscription acymailing and lists
+	// Queue priority
+	private $priority = 3;
+
+	// Ignore valide subscription acymailing and lists
 	public $ignoreSubscription = false;
 
 	public function __construct() {	}
@@ -144,6 +147,18 @@ class AcyMailingConnector {
 		}
 
 		return false;
+	}
+
+	/**
+	 * setPriority
+	 *
+	 * @param $priority int The priority for mailing queue (1-4 suggested) 1 is hight, 4 is low, default = 3
+	 *
+	 * @since 3.9
+	 */
+	public function setPriority($priority)
+	{
+		$this->priority = (int) $priority;
 	}
 
 	/**
@@ -257,11 +272,12 @@ class AcyMailingConnector {
 		// add to MailQue
 		$query = $db->getQuery(true);
 		$query->insert($db->qn('#__acymailing_queue'))
-			->columns(array('senddate', 'subid', 'mailid'))
+			->columns(array('senddate', 'subid', 'mailid', 'priority'))
 			->values(implode(',', array(
 				$db->q($sendDate),
 				$db->q($user->subid),
-				$db->q($this->mailid))));
+				$db->q($this->mailid),
+				$db->q($this->priority))));
 		$db->setQuery($query);
 
 		if($db->execute()){
