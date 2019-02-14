@@ -35,7 +35,7 @@ class AcyMailingConnector {
 	private $email_summary   = "";
 
 	// Queue priority
-	private $priority = 3;
+	private $priority = 2;
 
 	// Ignore valide subscription acymailing and lists
 	public $ignoreSubscription = false;
@@ -152,7 +152,9 @@ class AcyMailingConnector {
 	/**
 	 * setPriority
 	 *
-	 * @param $priority int The priority for mailing queue (1-4 suggested) 1 is hight, 4 is low, default = 3
+	 * @param $priority int The priority for mailing queue (1-4 suggested) <br>
+	 *                  high = 1, low = 4 <br>
+	 *                  default = 2, newsletter default = 3
 	 *
 	 * @since 3.9
 	 */
