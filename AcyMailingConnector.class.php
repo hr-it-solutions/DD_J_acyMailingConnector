@@ -18,7 +18,7 @@ class AcyMailingConnector {
 
 	var $pkey = '';
 
-        private $subject;
+	private $subject;
 	private $body;
 	private $altbody;
 
@@ -77,6 +77,40 @@ class AcyMailingConnector {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * getJUserList_AcyListSub
+	 *
+	 * Get Joomla User Object List from AcyListSubscriptions
+	 * e.g. for prozessing addMail() with params like {id}, {name}, etc.
+	 *
+	 * @param $listID int the acymailing list id.
+	 *
+	 * @since 3.9
+	 *
+	 * @return mixed a minimal User ObjectList of valid subscriptions included in this AcyMailing list
+	 *               the list includes #__user cols {id}, {name}, {username}, {email}
+	 *               the list insludes #__acymailing_subscriber cols {subid}
+	 *
+	 */
+	public function getJUserList_AcyListSub($listID){
+
+		$db = JFactory::getDbo();
+
+		$query = $db->getQuery(true);
+
+		$query->select($db->qn(array('SUB.subid','JU.id','JU.name','JU.username','JU.email')))
+			->from('#__acymailing_listsub AS L')
+			->join('LEFT', '#__acymailing_subscriber AS SUB ON (SUB.subid = L.subid)')
+			->join('LEFT', '#__users AS JU ON (JU.id = SUB.userid)')
+			->where($db->qn('JU.block') . ' = 0')
+			->where($db->qn('L.listid') . ' = ' . (int) $listID)
+			->where($db->qn('L.status') . ' = 1');
+
+		$db->setQuery($query);
+
+		return $db->loadObjectList();
 	}
 
 	/**
